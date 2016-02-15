@@ -3,7 +3,11 @@
 ---
 @charset "utf-8";
 
-
+/* 
+ Import bourbon framework and the neat sematic grid framework. See http://neat.bourbon.io/
+*/
+@import "bourbon/bourbon";
+@import "neat/neat";
 
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
