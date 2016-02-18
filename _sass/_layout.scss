@@ -1,57 +1,153 @@
-body {
-	background: $dark;
-}
-
-// Default page
-.page-content {
-	.wrapper {
-		@include outer-container;
-		max-width: 60em !important;
-		max-height: 100%;
-	}
-}
 /*
-* Specific to index.html
+* Basic Front Page Grid Styling
 */
-// Scrollable post list on the right
-.home {
-	.fixed_left {
-		@include span-columns(6);
-		color: #f6f6f6;
+
+.header {
+	height: 400px;
+	background: $upper-accent;
+	margin-top: 100px;
+	margin-bottom: 40px;
+	border-radius: 0px;
+	box-shadow: rgba(0, 0, 0, 0.219608) 0px 1px 2px 0px;
+}
+
+.wrapper {
+	@include outer-container;
+	.col-1, .col-2, .col-3 {
+		@include span-columns(4);
+		height: 400px;
+		margin-top: 10px;
 	}
-	.scrollable_right {
-		@include span-columns(6); 
-		.wrapper {
-			background: $white;
-			border-radius: 5px;
-			padding: 20px;
-			overflow-y: hidden;
-			margin-top: 20px;
-			margin-bottom: 100px;
-			header h1 {
-			}
+}
+
+/*
+* Post listing
+*/
+
+.post-area {
+	padding: 0px;
+	border-radius: 3px;
+	background: $upper-accent;
+	margin-bottom: 50px;
+	box-shadow: rgba(0, 0, 0, 0.319608) 0px 1px 2px 0px;
+	.polaroid {
+		margin: 0;
+		margin-bottom: -5px;
+		padding: 0;
+		img {
+		    width: 100%; /* you can use % */
+		    height: auto;
+		    border-radius: 3px 3px 0px 0px;
+		    margin: 0;
+		    padding: 0;
+		    border-bottom-color: #f1f1f1;
+		    border-bottom-style: solid;
+		    border-bottom-width: 1px;
+		}
+	}
+	.desc {
+		margin: 0;
+		padding: 15px;
+		font-size: 15px;
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	header h1 {
+		padding: 0;
+		margin: 0;
+		margin-bottom: 5px;
+		border-top-color: #e5e5e5;
+		border-top-style: solid;
+		border-top-width: 1px;
+		a, a:active, a:visited {
+			margin: 0;
+			padding: 15px;
+			text-decoration: none;
+			color: #333;
+			font-size: 12px;
+			display: block;
+		}
+		a:hover {
+			background-color: #f9f9f9;
 		}
 	}
 }
 
-// Fixed title and other information
+/*
+* Awesome header
+*/
 
-.home {
-	.fixed_left {
-		.wrapper {
-			padding: 10px;
-			margin-top: 40px;
-			// Site title
-			header h1 {
+.header {
+	.galleria{ width: 100%; height: 400px; background: #fff }
+}
+
+/*
+* Site Header
+*/
+
+.site-header {
+	.wrapper2 {
+		width: 100%;
+		box-shadow: rgba(0, 0, 0, 0.319608) 0px 0px 2px 0px;
+		background: $header-color;
+		position:absolute;
+		top: 0px;
+		left: 0px;
+
+		header h1 {
+			margin: 25px;
+			padding: 0;
+			margin-left: 15%;
+			a, a:active, a:visited, a:hover {
+				text-decoration: none;
 				text-transform: uppercase;
-				font-size:3em;
-				text-align: left;
-				padding-top: 10px;
-				margin-top: 40px;
-			}
-			.intro {
-				max-width: 80%;
+				font-weight: normal;
+				font-size: 22px;
+				letter-spacing: 2px;
+				font-family: $sans;
+				color: #555f61;
+				display: block;
+				vertical-align: center;
+				
 			}
 		}
+		.nav {
+			li {
+				float: left;
+				display: block;
+				padding: 10px;
+				vertical-align: center;
+				text-transform: uppercase;
+				a, a:visited, a:active {
+					font-weight: normal;
+					text-decoration: none;
+					color: #333;
+				}
+				a:hover {
+					color: #444;
+				}
+			}
+			position: absolute;
+			top: 5px;
+			right: 10%;
+		}
 	}
+}
+
+/*
+* Standard page Styling 
+*/
+
+.page-content {
+	.page-wrapper {
+		padding: 80px;
+		background: $upper-accent;
+		margin-top: 100px;
+		margin-bottom: 40px;
+		border-radius: 0px;
+		box-shadow: rgba(0, 0, 0, 0.219608) 0px 1px 2px 0px;
+		line-height: 1.5;
+	}	
 }

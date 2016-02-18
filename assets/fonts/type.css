@@ -6,3 +6,15 @@
 	font-family: "Barrio Regular";
 	src: url('Barrio-Regular.otf');
 }
+@font-face {
+	font-family: "Quicksand Regular";
+	src: url('Quicksand-Regular.otf');
+}
+@font-face {
+	font-family: "Alegreya";
+	src: url('Alegreya-Regular.ttf');
+}
+@font-face {
+	font-family: "AlteHaasGroteskBold";
+	src: url('AlteHaasGroteskBold.ttf');
+}

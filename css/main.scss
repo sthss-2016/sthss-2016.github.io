@@ -4,31 +4,18 @@
 @charset "utf-8";
 
 /* 
- Import bourbon framework and the neat sematic grid framework. See http://neat.bourbon.io/
+ Import bourbon framework and the neat sematic grid. See http://neat.bourbon.io/
 */
 @import "bourbon/bourbon";
 @import "neat/neat";
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$sans: "Quicksand Regular";
+$display: "Barrio Regular";
+$light-grey: rgb(245,245,245);
+$upper-accent: #fff;
+$header-color: #fff;
 
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-$white: #f6f6f6;
-$dark:  #121212;
-$midnight: #031C33;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-$transparent: lighten(#555, 90%);
 // Width of the content area
 $content-width:    800px;
 

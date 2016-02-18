@@ -1,18 +1,114 @@
 <!DOCTYPE html>
 <html>
-
+  <head>
   {% include head.html %}
 
+
+  <script type = "text/javascript">
+    Galleria.loadTheme('assets/scripts/galleria/themes/classic/galleria.classic.min.js');
+    Galleria.run('.galleria');
+  </script> 
+
+</head>
   <body>
-  <div class = "darken">
+
+    {% include header.html %}
+
     <div class="page-content">
+
       <div class="wrapper">
-        {{ content }}
+
+         <div class="header">
+          <div class="galleria">
+            {% for post in site.posts %}{% if post.featured %}
+              <img src="/assets/images/{{post.feature}}">
+            {% endif %}{% endfor %}
+          </div>
+         </div>
+
+         <div class="col-1">
+          {% assign j =0 %}{% for i in (0..site.posts.size) %}{% if site.posts[j] %}
+
+            <div class="post-area">
+
+             {% if site.posts[j].feature %}
+             <div class="polaroid">
+              <img src="{{site.baseurl}}/assets/images/{{site.posts[j].feature}}">
+             </div>
+             {% endif %}
+
+             {% if site.posts[j].description %}<div class="desc">
+              <p>{{ site.posts[j].description }}</p>
+             </div>{% endif %}
+
+             <header>
+              <h1><a href="{{ site.posts[j].url }}">{{site.posts[j].title}}</a></h1>
+             </header>
+
+             
+
+            </div> 
+
+           {% endif %}{% assign j = j | plus: 3 %}{% endfor %}
+         </div>
+
+         <div class="col-2">
+          {% assign j = 1 %}{% for i in (0..site.posts.size) %}{% if site.posts[j] %}
+
+            <div class="post-area">
+
+             {% if site.posts[j].feature %}
+             <div class="polaroid">
+              <img src="{{site.baseurl}}/assets/images/{{site.posts[j].feature}}">
+             </div>
+             {% endif %}
+
+             {% if site.posts[j].description %}<div class="desc">
+              <p>{{ site.posts[j].description }}</p>
+             </div>{% endif %}
+
+             <header>
+              <h1><a href="{{ site.posts[j].url }}">{{site.posts[j].title}}</a></h1>
+             </header>
+
+             
+
+            </div> 
+
+           {% endif %}{% assign j = j | plus: 3 %}{% endfor %}
+         </div>
+
+         <div class="col-3">
+          {% assign j = 2 %}{% for i in (0..site.posts.size) %}{% if site.posts[j] %}
+
+            <div class="post-area">
+
+             {% if site.posts[j].feature %}
+             <div class="polaroid">
+              <img src="{{site.baseurl}}/assets/images/{{site.posts[j].feature}}">
+             </div>
+             {% endif %}
+
+
+              {% if site.posts[j].description %}<div class="desc">
+              <p>{{ site.posts[j].description }}</p>
+             </div>{% endif %}
+
+             <header>
+              <h1><a href="{{ site.posts[j].url }}">{{site.posts[j].title}}</a></h1>
+             </header>
+
+             
+
+            </div> 
+
+           {% endif %}{% assign j = j | plus: 3 %}{% endfor %}
+         </div>
+
       </div>
-    </div>
 
     {% include footer.html %}
-  </div>
+    </div>
   </body>
 
 </html>
