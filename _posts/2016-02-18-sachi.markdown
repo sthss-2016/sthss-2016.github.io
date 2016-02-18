@@ -1,0 +1,7 @@
+---
+layout: page
+title: Wtf?
+date: 2016-02-18T14:29:57+05:30
+feature: "sachi.jpg"
+featured: true
+---

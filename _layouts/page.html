@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{post.title}}</title>
+	<title>{{page.title}}</title>
 	{% include head.html %}
 </head>
 <body>
 	{% include header.html %}
 	<div class="page-content">
 		<div class="wrapper">
-		<div class="page-wrapper">
+		<div class="page-wrapper">{%if page.feature %}
+		 <img src="\assets\images\{{page.feature}}">{%endif%}
 		 {{content}}
 		 </div>
 		</div>

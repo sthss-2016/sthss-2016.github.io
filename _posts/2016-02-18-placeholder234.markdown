@@ -1,0 +1,6 @@
+---
+layout: page
+feature: "pic3.jpg"
+title: Hold Place
+date: 2016-02-18T14:31:14+05:30
+---

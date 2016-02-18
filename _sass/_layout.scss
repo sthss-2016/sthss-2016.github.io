@@ -1,11 +1,24 @@
 /*
 * Basic Front Page Grid Styling
 */
-
+.toast {
+	background: $upper-accent;
+	margin-top: 100px;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display:block;
+	border-radius: 0px;
+	box-shadow: rgba(0, 0, 0, 0.219608) 0px 1px 2px 0px;
+	width: 50%;
+	p {
+		padding: 20px;
+	}
+}
 .header {
 	height: 400px;
 	background: $upper-accent;
-	margin-top: 100px;
+	margin-top: 20px;
 	margin-bottom: 40px;
 	border-radius: 0px;
 	box-shadow: rgba(0, 0, 0, 0.219608) 0px 1px 2px 0px;
